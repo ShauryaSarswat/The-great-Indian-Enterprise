@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+<div class="ui container main">
+<h1>Index Page</h1>
+<% blogs.forEach(function(blogs){ %>
+	<div>
+	<img src="<%= blogs.image %>" >
+	  <h2><%= blogs.title %>
+	  <h3><%= blogs.created %></h3>
+	  <h4><%- blogs.body.substring(0, 200) %>.........</h4>
+	  <a href="/blogs/<%= blogs._id %>" >Read More</a>
+	  <br>
+	</div>
+<% }) %>
+</div>
+<%- include("partials/footer") %>
