@@ -1,11 +1,13 @@
 <%- include("partials/header") %>
 <div class="ui container main">
-<h1>Index Page</h1>
 <% blogs.forEach(function(blogs){ %>
-	<div>
-	<img src="<%= blogs.image %>" >
-	  <h2><%= blogs.title %>
-	  <h3><%= blogs.created %></h3>
+	<div class="container col-sm-12" style="background-color: white;margin:0;padding:20px;line-height: 2;">
+
+	<h2 style="font-weight: bold;font-size: 36px;letter-spacing: 1.2px;line-height: 2;margin-left:20px;"><%= blogs.title %></h2>
+	<h4 class="text-muted" style="margin-left:20px;" ><%= blogs.created.toDateString() %></h4><br>
+	<img src="<%= blogs.image %>" class="col-sm-12 " style="height: 600px;width: 100%;" >
+	  
+	  
 	  <h4><%- blogs.body.substring(0, 200) %>.........</h4>
 	  <a href="/blogs/<%= blogs._id %>" >Read More</a>
 	  <br>
