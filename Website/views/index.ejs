@@ -1,14 +1,14 @@
 <%- include("partials/header") %>
 <div class="ui container main">
 <% blogs.forEach(function(blogs){ %>
-	<div class="container col-sm-12" style="background-color: white;margin:0;padding:20px;line-height: 2;">
+	<div class="container col-sm-12 text-light" style="background-color: white;margin:0;padding:20px;line-height: 2;background-image: url(<%= blogs.image %>);background-repeat: no-repeat;background-size: cover;background-position: center;background-color: #2e2f30;
+  background-blend-mode: screen;margin-top: 30px;margin-bottom:30px;">
 
 	<h2 style="font-weight: bold;font-size: 36px;letter-spacing: 1.2px;line-height: 2;margin-left:20px;"><%= blogs.title %></h2>
 	<h4 class="text-muted" style="margin-left:20px;" ><%= blogs.created.toDateString() %></h4><br>
-	<img src="<%= blogs.image %>" class="col-sm-12 " style="height: 600px;width: 100%;" >
-	  
-	  
-	  <h4><%- blogs.body.substring(0, 200) %>.........</h4>
+	<img src="<%= blogs.image %>" class="col-sm-12 " style="height: 500px;width: 100%;" >
+	  <br>
+	  <span class="lead text-light" style="padding-left: 20px;font-weight: 200;font-family: 'Dancing Script', cursive;font-size: 2.3rem;"><%- blogs.body.substring(0, 500) %>.........</span>
 	  <a href="/blogs/<%= blogs._id %>" >Read More</a>
 	  <br>
 	</div>
