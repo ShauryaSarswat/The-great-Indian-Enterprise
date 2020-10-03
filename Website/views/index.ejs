@@ -2,21 +2,18 @@
 
 <div class="ui main text container">
     <div class="ui center huge header">THE #CHAINS</div>
-    <div class="ui top attached segment">
-        <div class="ui divided items">
+    <div class="ui top attached segment"style="">
+        <div class="ui divided items" style="background-color: black;padding: 10px;margin: 10px;">
             <% blogs.forEach(function(blog){ %>
-                <div class="item">
+                <div class="item ">
                     <div class="image">       
                         <img src="<%= blog.image %>">
                     </div>
-                    <div class="content">
-                        <a class="header" href="/blogs/<%=blog._id%>"><%=blog.title %></a>
+                    <div class="content ">
+                        <a class="header text-light" href="/blogs/<%=blog._id%>"><%=blog.title %></a>
                         <div class="meta">
-                            <span><%= blog.created.toDateString() %></span>
-                        </div>
-                        <div class="description">
-                            <p> <%- blog.body.substring(0,100) %>...</p> 
-                        </div>
+                            <span class="text-light"><%= blog.created.toDateString() %></span>
+                        </div><br>
                         <div class="extra">
                             <a class="ui floated basic blue button" href="/blogs/<%=blog._id%>">
                                 Read More
@@ -29,9 +26,4 @@
         </div>
     </div>
 </div>
-<h1>INDEX PAGE</h1>
-
-
-
-
 <%- include("partials/footer") %>

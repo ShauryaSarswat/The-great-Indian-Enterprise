@@ -3,14 +3,8 @@ i .icon{
 }
 .container.main{ margin-top: 7.0em;}
 body{
-	background-image: url(/images/background.jfif);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: bottom;
-	margin: 40px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+	background-color: pink;
+	margin-top: 40px;
 }
 nav{
 	margin: 0px;
@@ -23,7 +17,7 @@ nav{
 	color: white;
 }
 .nav-link:hover{
-	color: gray;
+	color: yellow;
 }
 #brand{
 	height: 40px;
