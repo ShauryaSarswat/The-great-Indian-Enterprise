@@ -1,6 +1,7 @@
 var express     = require("express"),
 methodOverride  = require("method-override"),
 bodyParser      = require("body-parser"),
+expressSanitizer = require("express-sanitizer"),
 mongoose        = require("mongoose"),
 app             = express();
 mongoose.connect('mongodb://localhost:27017/restful_blog_app', {
@@ -12,6 +13,7 @@ app.use(express.static("public")); //using express
 app.use(bodyParser.urlencoded({extended: true})); //using body-parser
 app.use(methodOverride("_method"));//using method-override + what to look for in url *the parentheses as above*
 //Routes
+app.use(expressSanitizer());
 var blogSchema = new mongoose.Schema({
     title: String,
     image: String,
@@ -37,6 +39,7 @@ app.get("/blogs", function (req, res){
 //CREATE ROUTE
 app.post("/blogs/new", function(req, res){
    //create blog
+   req.body.blog.body = req.sanitize(req.body.blog.body);
    Blog.create(req.body.blog, function (err, newBlog){
        if(err) {
            res.render("new");

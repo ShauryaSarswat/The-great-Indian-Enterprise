@@ -1,29 +1,30 @@
 <%- include("partials/header") %>
 
 <div class="ui main text container">
-    <div class="ui center huge header">THE #CHAINS</div>
-    <div class="ui top attached segment"style="">
-        <div class="ui divided items" style="background-color: black;padding: 10px;margin: 10px;">
+    <div class="display-3" style="font-family: 'Poiret One', cursive;margin-bottom: 50px;"><center><U>THE ENTRE CHAINS</U></center></div>
             <% blogs.forEach(function(blog){ %>
-                <div class="item ">
-                    <div class="image">       
-                        <img src="<%= blog.image %>">
-                    </div>
-                    <div class="content ">
-                        <a class="header text-light" href="/blogs/<%=blog._id%>"><%=blog.title %></a>
-                        <div class="meta">
-                            <span class="text-light"><%= blog.created.toDateString() %></span>
-                        </div><br>
-                        <div class="extra">
-                            <a class="ui floated basic blue button" href="/blogs/<%=blog._id%>">
-                                Read More
-                                <i class="right chevron icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            <% }) %>
+            <a href="/blogs/<%=blog._id%>" style="text-decoration: none;margin-top: 30px;" ><div class="container h-80">
+    <div class="row align-items-center h-80" style=" background-image: linear-gradient(to bottom, 
+     rgba(201, 201, 201,0.71), rgba(122, 122, 122,0.71),rgba(94, 94, 94,71)), url(<%= blog.image %>);height: 400px; width: auto;background-size:cover;background-repeat: no-repeat;background-position:center;margin-top: 10px;margin-bottom: 10px;">
+        <div class="col-12 mx-auto">
+            <div class="jumbotron" style="background: transparent">
+            <span class="text-light display-2"><%= blog.title %></span>
+            <div class="d-flex justify-content-end text-light">
+      
+         <%= blog.created.toDateString() %>
+ </div>
+            </div>
+            
         </div>
     </div>
+</div></a>
+               
+                            
+                       
+            <% }) %>
+        </div>
+ 
+<div class="text-center">
+<center><a href="/blogs/new"><button class="btn-lg btn-dark mt-5 mr-2 lead" style="margin-top: 12px;">Create a new post</button></a></center>
 </div>
 <%- include("partials/footer") %>
