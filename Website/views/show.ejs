@@ -8,7 +8,7 @@
         <div class="item">
              <img class="ui centered rounded image" src="<%=blog.image%>">
         
-        <div class="description text-center rounded-lg" style="background-color: white;margin-top: 8px;color: black;margin-bottom: 8px; padding: 8px;">
+        <div class="description text-center rounded-lg" style="color: white;margin-top: 8px;margin-bottom: 8px; padding: 8px;">
                 <p><%-blog.body%></p>
         </div>
         <form id="delete" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
