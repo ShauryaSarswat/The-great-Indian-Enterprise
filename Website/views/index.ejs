@@ -1,11 +1,11 @@
 <%- include("partials/header") %>
 
 <div class="ui main text container">
-    <div class="display-3" style="font-family: 'David Libre', serif;;margin-bottom: 50px;"><center><U>THE ENTRE CHAINS</U></center></div>
+    <div class="display-3" style="font-family: 'David Libre', serif;margin-bottom: 50px;"><center><U>THE ENTRE CHAINS</U></center></div>
             <% blogs.forEach(function(blog){ %>
-            <a href="/blogs/<%=blog._id%>" style="text-decoration: none;margin-top: 30px;" ><div class="container h-80">
+            <a href="/blogs/<%=blog._id%>" style="text-decoration: none;margin-top: 30px;" id="hoverAbleIndex"><div class="container h-80">
     <div class="row align-items-center h-80" style=" background-image: linear-gradient(to bottom, 
-     rgba(201, 201, 201,0.71), rgba(122, 122, 122,0.71),rgba(94, 94, 94,0.71)), url(<%= blog.image %>);height: 400px; width: auto;background-size:cover;background-repeat: no-repeat;background-position:center;margin-top: 30px;margin-bottom: 30px;">
+     rgba(201, 201, 201,0.3), rgba(122, 122, 122,0.5),rgba(94, 94, 94,0.7)), url(<%= blog.image %>);height: 400px; width: auto;background-size:cover;background-repeat: no-repeat;background-position:center;margin-top: 30px;margin-bottom: 30px;">
         <div class="col-12 mx-auto">
             <div class="jumbotron" style="background: transparent">
             <span class="text-light display-2"><%= blog.title %></span>

@@ -34,3 +34,5 @@ nav{
 .jumbotron{
 	margin-bottom: 0px;
 }
+#hoverAbleIndex:hover{background-image: linear-gradient(rgb(166, 166, 166),rgb(102, 102, 102),rgb(64, 64, 64));
+}
